@@ -191,7 +191,7 @@ EOT
         IoInterface $io
     ) {
         $messages = [];
-        $errPrint = function (\Throwable $e) {
+        $errPrint = function (\Throwable $e) : string {
             return $e->getMessage().PHP_EOL.' at '.str_replace(getcwd().DIRECTORY_SEPARATOR, '', $e->getFile());
         };
 

@@ -21,12 +21,12 @@ class Permalink implements PermalinkInterface
     /**
      * @var string
      */
-    private $relativeFilePath;
+    private string $relativeFilePath;
 
     /**
      * @var string
      */
-    private $relativeUrlPath;
+    private string $relativeUrlPath;
 
     public function __construct(string $relativeFilePath, string $relativeUrlPath)
     {

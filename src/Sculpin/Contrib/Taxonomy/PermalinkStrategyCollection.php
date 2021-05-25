@@ -17,7 +17,7 @@ use Sculpin\Contrib\Taxonomy\PermalinkStrategy\PermalinkStrategyInterface;
 
 class PermalinkStrategyCollection
 {
-    protected $strategies;
+    protected iterable $strategies;
 
     public function __construct()
     {

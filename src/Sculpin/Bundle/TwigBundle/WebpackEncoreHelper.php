@@ -9,7 +9,7 @@ use Twig\Extension\GlobalsInterface;
 
 class WebpackEncoreHelper extends AbstractExtension implements GlobalsInterface
 {
-    protected $sourceDir;
+    protected string $sourceDir;
     protected $manifest;
 
     public function __construct(string $sourceDir, ?string $manifest)

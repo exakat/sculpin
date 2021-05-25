@@ -191,7 +191,7 @@ EOF
     private function outputServices(
         OutputInterface $output,
         $serviceIds,
-        $showPrivate = false,
+        bool $showPrivate = false,
         $showTagAttributes = null
     ): void {
         // set the label to specify public or public+private
@@ -239,14 +239,14 @@ EOF
             }
         }
         $format = '%-'.$maxName.'s ';
-        $format .= implode("", array_map(function ($length) {
+        $format .= implode("", array_map(function (string $length) : string {
             return "%-{$length}s ";
         }, $maxTags));
         $format .=  '%s';
 
         // the title field needs extra space to make up for comment tags
         $format1 = '%-'.($maxName + 19).'s ';
-        $format1 .= implode("", array_map(function ($length) {
+        $format1 .= implode("", array_map(function (int $length) : string {
             return '%-'.($length + 19).'s ';
         }, $maxTags));
         $format1 .= '%s';
@@ -343,7 +343,7 @@ EOF
                             '    - %-30s (%s)',
                             $tagName,
                             implode(', ', array_map(
-                                function ($key, $value) {
+                                function ($key, $value) : string {
                                     return sprintf('<info>%s</info>: %s', $key, $value);
                                 },
                                 array_keys($singleTagData),

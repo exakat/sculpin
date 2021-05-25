@@ -40,14 +40,14 @@ final class ConsoleIo implements IoInterface
      *
      * @var string
      */
-    private $lastMessage;
+    private string $lastMessage;
 
     /**
      * Time in seconds with fractions when debugging has been enabled.
      *
      * @var float
      */
-    private $startTime;
+    private int $startTime;
 
     public function __construct(InputInterface $input, OutputInterface $output)
     {
@@ -121,7 +121,7 @@ final class ConsoleIo implements IoInterface
     /**
      * {@inheritDoc}
      */
-    public function overwrite($messages, bool $newline = true, ?int $size = null)
+    public function overwrite(string $messages, bool $newline = true, ?int $size = null)
     {
         // messages can be an array, let's convert it to string anyway
         $messages = join($newline ? "\n" : '', (array) $messages);

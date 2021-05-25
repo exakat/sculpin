@@ -27,22 +27,22 @@ final class FilesystemDataSource implements DataSourceInterface
     /**
      * @var string
      */
-    private $sourceDir;
+    private string $sourceDir;
 
     /**
      * @var string[]
      */
-    private $excludePaths;
+    private array $excludePaths;
 
     /**
      * @var string[]
      */
-    private $ignorePaths;
+    private array $ignorePaths;
 
     /**
      * @var string[]
      */
-    private $rawPaths;
+    private array $rawPaths;
 
     /**
      * @var AntPathMatcher
@@ -62,7 +62,7 @@ final class FilesystemDataSource implements DataSourceInterface
     /**
      * @var string
      */
-    private $sinceTime;
+    private string $sinceTime;
 
     /**
      * @param string[] $excludePaths Exclude paths

@@ -19,7 +19,7 @@ use Symfony\Component\Yaml\Yaml;
 class ThemeRegistry
 {
     private $finderFactory;
-    private $directory;
+    private string $directory;
     private $activeTheme;
 
     public function __construct($finderFactory, string $directory, ?string $activeTheme = null)

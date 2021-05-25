@@ -33,21 +33,21 @@ final class FlexibleExtensionFilesystemLoader implements LoaderInterface, EventS
     /**
      * @var string[]
      */
-    private $cachedCacheKey = [];
+    private array $cachedCacheKey = [];
 
     /**
      * @var string[]
      */
-    private $cachedCacheKeyExtension = [];
+    private array $cachedCacheKeyExtension = [];
 
     /**
      * @var \Throwable[]
      */
-    private $cachedCacheKeyException = [];
+    private array $cachedCacheKeyException = [];
     /**
      * @var string[]
      */
-    private $extensions = [];
+    private array $extensions = [];
 
     /**
      * @param string[] $sourcePaths
@@ -56,7 +56,7 @@ final class FlexibleExtensionFilesystemLoader implements LoaderInterface, EventS
      */
     public function __construct(string $sourceDir, array $sourcePaths, array $paths, array $extensions)
     {
-        $mappedSourcePaths = array_map(function ($path) use ($sourceDir) {
+        $mappedSourcePaths = array_map(function (string $path) use ($sourceDir) : string {
             return $sourceDir.'/'.$path;
         }, $sourcePaths);
 
@@ -66,7 +66,7 @@ final class FlexibleExtensionFilesystemLoader implements LoaderInterface, EventS
         );
 
         $this->filesystemLoader = new FilesystemLoader($allPaths);
-        $this->extensions = array_map(function ($ext) {
+        $this->extensions = array_map(function (string $ext) : string {
             return $ext?'.'.$ext:$ext;
         }, $extensions);
     }

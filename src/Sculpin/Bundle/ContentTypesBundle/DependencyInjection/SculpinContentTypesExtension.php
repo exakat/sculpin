@@ -279,7 +279,7 @@ class SculpinContentTypesExtension extends Extension
     }
 
     private static function generateTypesId(string $type, string $value)
-    {
+    : string {
         return implode('.', ['sculpin_content_types.types', $type, $value]);
     }
 }

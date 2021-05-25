@@ -29,12 +29,12 @@ final class HttpServer
     /**
      * @var bool
      */
-    private $debug;
+    private bool $debug;
 
     /**
      * @var string
      */
-    private $env;
+    private string $env;
 
     /**
      * @var StreamSelectLoop

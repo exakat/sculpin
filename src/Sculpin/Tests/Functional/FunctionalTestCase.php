@@ -71,7 +71,7 @@ class FunctionalTestCase extends TestCase
      * Execute a command against the sculpin binary
      * @param string $command
      */
-    protected function executeSculpin($command): void
+    protected function executeSculpin(string $command): void
     {
         $binPath    = __DIR__ . '/../../../../bin';
         $projectDir = static::projectDir();

@@ -25,12 +25,12 @@ final class SiteConfigurationFactory
     /**
      * @var string
      */
-    private $rootDir;
+    private string $rootDir;
 
     /**
      * @var string
      */
-    private $environment;
+    private string $environment;
 
     public function __construct(string $rootDir, string $environment)
     {

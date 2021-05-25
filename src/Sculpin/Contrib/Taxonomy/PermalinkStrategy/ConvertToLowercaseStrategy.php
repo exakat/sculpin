@@ -15,8 +15,8 @@ namespace Sculpin\Contrib\Taxonomy\PermalinkStrategy;
 
 class ConvertToLowercaseStrategy implements PermalinkStrategyInterface
 {
-    public function process($str)
-    {
+    public function process(string $str)
+    : string {
         return strtolower($str);
     }
 }

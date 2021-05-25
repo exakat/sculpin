@@ -30,7 +30,7 @@ class SourcePermalinkFactoryTest extends TestCase
     }
 
     public function provideCreateData()
-    {
+    : array {
         return [
             'none setting for permalink' => [
                 'none',

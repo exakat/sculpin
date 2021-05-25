@@ -30,12 +30,12 @@ final class ConvertEvent extends Event
     /**
      * @var string
      */
-    private $converter;
+    private string $converter;
 
     /**
      * @var string
      */
-    private $defaultFormatter;
+    private string $defaultFormatter;
 
     public function __construct(SourceInterface $source, string $converter, string $defaultFormatter)
     {

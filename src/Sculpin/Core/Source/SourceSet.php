@@ -21,12 +21,12 @@ class SourceSet
     /**
      * @var SourceInterface[]
      */
-    protected $sources = [];
+    protected array $sources = [];
 
     /**
      * @var SourceInterface[]
      */
-    protected $newSources = [];
+    protected array $newSources = [];
 
     /**
      * @param SourceInterface[] $sources

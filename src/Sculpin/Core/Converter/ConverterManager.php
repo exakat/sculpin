@@ -43,7 +43,7 @@ final class ConverterManager
     /**
      * @var ConverterInterface[]
      */
-    private $converters = [];
+    private array $converters = [];
 
     public function __construct(EventDispatcherInterface $eventDispatcher, FormatterManager $formatterManager)
     {

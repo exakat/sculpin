@@ -43,12 +43,12 @@ class FormatterManager
     /**
      * @var array
      */
-    protected $formatters = [];
+    protected array $formatters = [];
 
     /**
      * @var string
      */
-    protected $defaultFormatter;
+    protected string $defaultFormatter;
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,

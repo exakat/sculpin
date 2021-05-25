@@ -27,7 +27,7 @@ final class ConfigFilesystemDataSource implements DataSourceInterface
     /**
      * @var string
      */
-    private $sourceDir;
+    private string $sourceDir;
 
     /**
      * @var ConfigurationInterface
@@ -47,7 +47,7 @@ final class ConfigFilesystemDataSource implements DataSourceInterface
     /**
      * @var string
      */
-    private $sinceTime;
+    private string $sinceTime;
 
     public function __construct(
         string $sourceDir,

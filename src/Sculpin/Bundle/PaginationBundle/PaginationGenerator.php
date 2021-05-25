@@ -40,7 +40,7 @@ final class PaginationGenerator implements GeneratorInterface
      *
      * @var int
      */
-    private $maxPerPage;
+    private int $maxPerPage;
 
     public function __construct(
         DataProviderManager $dataProviderManager,

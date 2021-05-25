@@ -59,7 +59,7 @@ class ProxySourceCollectionDataProvider implements DataProviderInterface, EventS
     }
 
     public static function getSubscribedEvents()
-    {
+    : array {
         return [
             Sculpin::EVENT_BEFORE_RUN => [
                 ['beforeRun', 0],

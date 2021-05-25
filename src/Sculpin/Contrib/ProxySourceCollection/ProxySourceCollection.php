@@ -22,7 +22,7 @@ class ProxySourceCollection implements \ArrayAccess, \Iterator, \Countable
     /**
      * @var $items ProxySourceItem[]
      */
-    protected $items = [];
+    protected array $items = [];
     protected $sorter;
 
     public function __construct(array $items = [], SorterInterface $sorter = null)
@@ -76,12 +76,12 @@ class ProxySourceCollection implements \ArrayAccess, \Iterator, \Countable
     }
 
     public function valid()
-    {
+    : bool {
         return $this->current() !== false;
     }
 
     public function count()
-    {
+    : int {
         return count($this->items);
     }
 
@@ -130,7 +130,7 @@ class ProxySourceCollection implements \ArrayAccess, \Iterator, \Countable
         }
         unset($item);
 
-        uasort($this->items, function ($a, $b) use ($comparator) {
+        uasort($this->items, function ($a, $b) use ($comparator) : int {
             $result = $comparator($a[1], $b[1]);
 
             // use the index to prevent undefined behaviour when comparator reports items are "equal"
