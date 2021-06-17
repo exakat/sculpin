@@ -21,7 +21,7 @@ class CompositeDataSource implements DataSourceInterface
     /**
      * @var DataSourceInterface[]
      */
-    private $dataSources = [];
+    private array $dataSources = [];
 
     /**
      * @param DataSourceInterface[] $dataSources

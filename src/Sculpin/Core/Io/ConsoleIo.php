@@ -40,14 +40,14 @@ final class ConsoleIo implements IoInterface
      *
      * @var string
      */
-    private $lastMessage;
+    private string $lastMessage;
 
     /**
      * Time in seconds with fractions when debugging has been enabled.
      *
      * @var float
      */
-    private $startTime;
+    private int $startTime;
 
     public function __construct(InputInterface $input, OutputInterface $output)
     {

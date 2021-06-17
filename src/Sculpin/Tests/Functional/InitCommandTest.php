@@ -84,7 +84,7 @@ class InitCommandTest extends FunctionalTestCase
         );
     }
 
-    protected function assertProjectInitialized($projectDir): void
+    protected function assertProjectInitialized(string $projectDir): void
     {
         $files = $this->finder->in($projectDir);
 

@@ -68,12 +68,12 @@ class PathConfiguratorPass implements CompilerPassInterface
         }
     }
 
-    protected function antify($paths)
+    protected function antify(array $paths)
     {
         $matcher = $this->matcher;
 
         return array_map(
-            function ($path) use ($matcher) {
+            function (string $path) use ($matcher) : string {
                 if ($matcher->isPattern($path)) {
                     return $path;
                 }

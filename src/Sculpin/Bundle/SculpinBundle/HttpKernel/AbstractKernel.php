@@ -24,7 +24,7 @@ use Symfony\Component\HttpKernel\Kernel;
  */
 abstract class AbstractKernel extends Kernel
 {
-    protected $missingSculpinBundles = [];
+    protected array $missingSculpinBundles = [];
     protected $outputDir;
     protected $projectDir;
     protected $sourceDir;

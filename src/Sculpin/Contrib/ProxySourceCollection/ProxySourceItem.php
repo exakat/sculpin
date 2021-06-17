@@ -22,7 +22,7 @@ class ProxySourceItem extends ProxySource implements \ArrayAccess
     private $nextItem;
 
     public function id()
-    {
+    : string {
         return $this->sourceId();
     }
 
@@ -127,12 +127,12 @@ class ProxySourceItem extends ProxySource implements \ArrayAccess
         }
     }
 
-    public function offsetExists($offset)
-    {
+    public function offsetExists(string $offset)
+    : bool {
         return ! method_exists($this, $offset) && null !== $this->data()->get($offset);
     }
 
-    public function offsetUnset($offset)
+    public function offsetUnset(string $offset)
     {
         if (! method_exists($this, $offset)) {
             $data = $this->data();
@@ -142,7 +142,7 @@ class ProxySourceItem extends ProxySource implements \ArrayAccess
         }
     }
 
-    public function offsetGet($offset)
+    public function offsetGet(string $offset)
     {
         if (method_exists($this, $offset)) {
             return call_user_func([$this, $offset]);

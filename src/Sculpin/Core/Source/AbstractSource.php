@@ -50,7 +50,7 @@ abstract class AbstractSource implements SourceInterface
     /**
      * @var boolean
      */
-    protected $hasChanged;
+    protected bool $hasChanged;
 
     /**
      * @var PermalinkInterface
@@ -75,27 +75,27 @@ abstract class AbstractSource implements SourceInterface
     /**
      * @var boolean
      */
-    protected $useFileReference = false;
+    protected bool $useFileReference = false;
 
     /**
      * @var boolean
      */
-    protected $canBeFormatted = false;
+    protected bool $canBeFormatted = false;
 
     /**
      * @var boolean
      */
-    protected $isGenerator = false;
+    protected bool $isGenerator = false;
 
     /**
      * @var boolean
      */
-    protected $isGenerated = false;
+    protected bool $isGenerated = false;
 
     /**
      * @var boolean
      */
-    protected $shouldBeSkipped = false;
+    protected bool $shouldBeSkipped = false;
 
     protected function init(bool $hasChanged = false)
     {

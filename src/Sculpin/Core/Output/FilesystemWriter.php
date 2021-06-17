@@ -29,7 +29,7 @@ final class FilesystemWriter implements WriterInterface
     /**
      * @var string
      */
-    private $outputDir;
+    private string $outputDir;
 
     public function __construct(Filesystem $filesystem, string $outputDir)
     {

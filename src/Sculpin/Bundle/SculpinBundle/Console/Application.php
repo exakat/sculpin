@@ -40,7 +40,7 @@ final class Application extends BaseApplication
     /**
      * @var \Throwable[]
      */
-    private $registrationErrors = [];
+    private array $registrationErrors = [];
 
     public function __construct(KernelInterface $kernel)
     {

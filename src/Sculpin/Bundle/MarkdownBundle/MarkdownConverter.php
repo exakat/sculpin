@@ -39,7 +39,7 @@ final class MarkdownConverter implements ConverterInterface, EventSubscriberInte
      *
      * @var string[]
      */
-    private $extensions = [];
+    private array $extensions = [];
 
     /**
      * Constructor.

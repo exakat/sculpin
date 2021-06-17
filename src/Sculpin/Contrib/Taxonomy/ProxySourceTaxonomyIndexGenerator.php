@@ -22,7 +22,7 @@ class ProxySourceTaxonomyIndexGenerator implements GeneratorInterface
     private $dataProviderManager;
     private $dataProviderName;
     private $injectedTaxonKey;
-    private $injectedTaxonItemsKey;
+    private string $injectedTaxonItemsKey;
     private $permalinkStrategyCollection;
 
     public function __construct(

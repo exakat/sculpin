@@ -42,7 +42,7 @@ class GeneratorManager
     /**
      * @var array
      */
-    protected $generators = [];
+    protected array $generators = [];
 
     public function __construct(
         EventDispatcherInterface $eventDispatcher,

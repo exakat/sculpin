@@ -23,12 +23,12 @@ final class FormatContext
     /**
      * @var string
      */
-    private $templateId;
+    private string $templateId;
 
     /**
      * @var string
      */
-    private $template;
+    private string $template;
 
     /**
      * @var Data

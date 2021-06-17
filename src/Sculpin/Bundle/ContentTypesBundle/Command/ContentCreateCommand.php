@@ -210,7 +210,7 @@ EOT;
     }
 
     private function getIndexTemplate(string $plural, string $singular)
-    {
+    : string {
         $title = ucfirst($plural);
 
         return <<<EOT
